@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C3012" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
     </dependencies>
@@ -45,7 +45,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s1d-gM-vJv">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="136" id="rd6-ss-7HI"/>
+                                    <constraint firstAttribute="width" constant="136" id="Q9t-UI-z1v"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Take photo">
@@ -101,28 +101,67 @@
                                     <constraint firstAttribute="height" constant="179" id="1OU-ai-FVA"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zeg-fF-aTS">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="jWB-pd-wP5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="View in Safari">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="viewUploadedFile:" destination="2" eventType="touchUpInside" id="gxT-BW-wwP"/>
+                                </connections>
+                            </button>
+                            <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LqG-Ja-5ML">
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Sc6-Ef-98G"/>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Uploading..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RzT-T2-DE2">
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="RzT-T2-DE2" firstAttribute="centerX" secondItem="LqG-Ja-5ML" secondAttribute="centerX" type="default" id="Ljr-d0-7sc"/>
+                                    <constraint firstAttribute="height" constant="100" type="user" id="Yqk-Wf-8aW"/>
+                                    <constraint firstItem="Sc6-Ef-98G" firstAttribute="top" secondItem="LqG-Ja-5ML" secondAttribute="top" constant="31" id="bdA-cb-Yew"/>
+                                    <constraint firstItem="RzT-T2-DE2" firstAttribute="centerX" secondItem="Sc6-Ef-98G" secondAttribute="centerX" type="default" id="qL7-wQ-PMW"/>
+                                    <constraint firstItem="RzT-T2-DE2" firstAttribute="top" secondItem="Sc6-Ef-98G" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="z1l-zI-N3W"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="ZrF-YQ-ZzZ" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="4hj-5R-MKi"/>
                             <constraint firstAttribute="trailing" secondItem="dG6-OO-iRf" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="8du-MY-32W"/>
+                            <constraint firstItem="s1d-gM-vJv" firstAttribute="top" secondItem="3" secondAttribute="top" constant="58" id="ASv-tP-vfX"/>
+                            <constraint firstItem="zeg-fF-aTS" firstAttribute="centerX" secondItem="dCH-6U-das" secondAttribute="centerX" type="default" id="AoT-cW-Vg8"/>
+                            <constraint firstItem="LqG-Ja-5ML" firstAttribute="top" secondItem="3" secondAttribute="top" constant="180" type="user" id="BRY-7E-NYL"/>
+                            <constraint firstItem="dG6-OO-iRf" firstAttribute="top" secondItem="JAn-3X-Reg" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="DkO-Fb-8bU"/>
+                            <constraint firstItem="LqG-Ja-5ML" firstAttribute="centerX" secondItem="vsL-FI-ZH6" secondAttribute="centerX" type="default" id="Fh0-xU-b6M"/>
                             <constraint firstItem="4M6-PK-rE1" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="M9p-TS-k5N"/>
                             <constraint firstItem="4M6-PK-rE1" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="Ppv-fv-rcn"/>
                             <constraint firstItem="JAn-3X-Reg" firstAttribute="trailing" secondItem="s1d-gM-vJv" secondAttribute="trailing" type="default" id="RXU-eo-VLp"/>
+                            <constraint firstItem="zeg-fF-aTS" firstAttribute="centerY" secondItem="10" secondAttribute="centerY" type="default" id="Sgm-kZ-1EM"/>
                             <constraint firstItem="vsL-FI-ZH6" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Ua9-SQ-Zpk"/>
                             <constraint firstAttribute="trailing" secondItem="vsL-FI-ZH6" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="V3W-hH-NFg"/>
                             <constraint firstAttribute="trailing" secondItem="dCH-6U-das" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="V5c-h6-phV"/>
-                            <constraint firstItem="s1d-gM-vJv" firstAttribute="top" secondItem="3" secondAttribute="top" constant="58" id="Vyz-HM-SXJ"/>
-                            <constraint firstItem="s1d-gM-vJv" firstAttribute="baseline" secondItem="ZrF-YQ-ZzZ" secondAttribute="baseline" type="default" id="XH8-BC-KVq"/>
                             <constraint firstAttribute="trailing" secondItem="10" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="apl-1S-UOC"/>
                             <constraint firstAttribute="bottom" secondItem="10" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="bcr-if-aDO"/>
                             <constraint firstItem="vsL-FI-ZH6" firstAttribute="top" secondItem="dG6-OO-iRf" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="f2B-U0-Z5R"/>
                             <constraint firstItem="dCH-6U-das" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="j7Y-o5-eSF"/>
                             <constraint firstItem="s1d-gM-vJv" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="lPW-FO-ecE"/>
-                            <constraint firstItem="dG6-OO-iRf" firstAttribute="top" secondItem="s1d-gM-vJv" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="m0D-Wn-HzA"/>
+                            <constraint firstItem="ZrF-YQ-ZzZ" firstAttribute="baseline" secondItem="JAn-3X-Reg" secondAttribute="baseline" type="default" id="lYr-PH-bgf"/>
                             <constraint firstItem="dG6-OO-iRf" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="oc1-Ns-Y76"/>
                             <constraint firstItem="JAn-3X-Reg" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="pO5-re-65l"/>
                             <constraint firstItem="JAn-3X-Reg" firstAttribute="baseline" secondItem="s1d-gM-vJv" secondAttribute="baseline" type="default" id="s3e-4F-dRo"/>
+                            <constraint firstItem="LqG-Ja-5ML" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="110" id="tOX-hl-Ufv"/>
                             <constraint firstItem="dCH-6U-das" firstAttribute="top" secondItem="vsL-FI-ZH6" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="yzr-Pk-vPK"/>
                             <constraint firstItem="4M6-PK-rE1" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="z0f-Jg-TXN"/>
                         </constraints>
@@ -134,6 +173,9 @@
                         <outlet property="TakePhotoButton" destination="s1d-gM-vJv" id="CYY-tQ-YcU"/>
                         <outlet property="UploadButton" destination="vsL-FI-ZH6" id="lgg-Nd-UZN"/>
                         <outlet property="imagePreview" destination="dCH-6U-das" id="jPw-BT-cfY"/>
+                        <outlet property="spinnerBackground" destination="LqG-Ja-5ML" id="de9-Jx-qw1"/>
+                        <outlet property="spinny" destination="Sc6-Ef-98G" id="Ltw-pg-mFb"/>
+                        <outlet property="viewSafari" destination="zeg-fF-aTS" id="ajF-9V-fJj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
@@ -222,11 +264,15 @@
                 <relationship kind="action" name="pushedGalleryButton:"/>
                 <relationship kind="action" name="pushedPhotoButton:"/>
                 <relationship kind="action" name="pushedUploadFiles:"/>
+                <relationship kind="action" name="viewUploadedFile:"/>
                 <relationship kind="outlet" name="DescriptionTextView" candidateClass="UITextView"/>
                 <relationship kind="outlet" name="GalleryButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="TakePhotoButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="UploadButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="imagePreview" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="spinnerBackground" candidateClass="UIView"/>
+                <relationship kind="outlet" name="spinny" candidateClass="UIActivityIndicatorView"/>
+                <relationship kind="outlet" name="viewSafari" candidateClass="UIButton"/>
             </relationships>
         </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">

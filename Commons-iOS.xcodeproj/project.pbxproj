@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A908792169FF06C00A74C2B /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A908790169FF03700A74C2B /* AssetsLibrary.framework */; };
 		D4086171169B760800D6ACB0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4086170169B760800D6ACB0 /* UIKit.framework */; };
 		D4086173169B760800D6ACB0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4086172169B760800D6ACB0 /* Foundation.framework */; };
 		D4086175169B760800D6ACB0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4086174169B760800D6ACB0 /* CoreGraphics.framework */; };
@@ -34,6 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8A908790169FF03700A74C2B /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		D408616C169B760800D6ACB0 /* Commons-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Commons-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4086170169B760800D6ACB0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D4086172169B760800D6ACB0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -72,6 +74,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4D0E1FC169BA6D2003047A8 /* libxml2.dylib in Frameworks */,
+				8A908792169FF06C00A74C2B /* AssetsLibrary.framework in Frameworks */,
 				D4086171169B760800D6ACB0 /* UIKit.framework in Frameworks */,
 				D4086173169B760800D6ACB0 /* Foundation.framework in Frameworks */,
 				D4086175169B760800D6ACB0 /* CoreGraphics.framework in Frameworks */,
@@ -103,6 +106,7 @@
 		D408616F169B760800D6ACB0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8A908790169FF03700A74C2B /* AssetsLibrary.framework */,
 				D4086170169B760800D6ACB0 /* UIKit.framework */,
 				D4086172169B760800D6ACB0 /* Foundation.framework */,
 				D4086174169B760800D6ACB0 /* CoreGraphics.framework */,
@@ -324,12 +328,14 @@
 		D4086194169B760800D6ACB0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Karl Bautista (WJ6AJL35JJ)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Commons-iOS/Commons-iOS-Prefix.pch";
 				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = "Commons-iOS/Commons-iOS-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "C8263ED8-7869-4346-B767-7247C17A1D01";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -337,12 +343,14 @@
 		D4086195169B760800D6ACB0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Karl Bautista (WJ6AJL35JJ)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Commons-iOS/Commons-iOS-Prefix.pch";
 				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = "Commons-iOS/Commons-iOS-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "C8263ED8-7869-4346-B767-7247C17A1D01";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
